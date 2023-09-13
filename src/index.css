@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  html,body{
+    @apply m-0 w-full bg-bgColor flex justify-center items-center pt-32 sm:p-5
+  }
+}
+
+@layer components{
+  .card{
+    @apply flex justify-center items-center bg-cardBg  w-[1400px] h-[546px] sm:h-full sm:w-full sm:flex-col-reverse  rounded-xl
+  }
+  .card img{
+    @apply sm:w-full h-full sm:rounded-t-xl rounded-r-xl  opacity-50 w-full h-full
+  }
+  .card-left{
+    @apply flex flex-col items-center justify-center p-24 gap-8 
+    sm:text-center sm:p-16 sm:justify-center sm:items-center
+  }
+  .card-left h1{
+    @apply text-5xl text-text font-bold font-sans 
+    sm:text-4xl 
+  }
+  .card-left h1 span{
+    @apply text-textColor
+  }
+  .card-left p{
+    @apply text-paragraph font-sans  text-lg  text-xl pr-28 mt-5 
+    sm:text-center sm:text-xl sm:p-0
+  }
+  .card-left .card-table {
+    @apply flex justify-around items-center gap-24 text-left ml-[-7.3rem] mt-12 
+    sm:flex-col sm:m-1 sm:gap-12 sm:mt-12
+  }
+  .card-left .card-table .component,.queries,.templates{
+    @apply text-left flex flex-col 
+  }
+}
